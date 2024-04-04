@@ -424,11 +424,11 @@ void WriteH5::createGroup(std::string groupName)
    }
    catch (FileIException error)
    {
-      error.printError();
+      error.printErrorStack();
    }
    catch (GroupIException error)
    {
-      error.printError();
+      error.printErrorStack();
    }
 }
 
@@ -452,13 +452,13 @@ int LoadH5::getSize() const
     }
     catch (FileIException error)
     {
-       error.printError();
+       error.printErrorStack();
        int err = -1;
        return err;
     }
     catch (GroupIException error)
     {
-       error.printError();
+       error.printErrorStack();
        int err = -1;
        return err;
     }
@@ -515,13 +515,13 @@ int LoadH5::getDataint() const
    }
     catch (FileIException error)
     {
-       error.printError();
+       error.printErrorStack();
        int err = -1;
        return err;
     }
     catch (GroupIException error)
     {
-       error.printError();
+       error.printErrorStack();
        int err = -1;
        return err;
     }
@@ -574,13 +574,13 @@ float LoadH5::getDatafloat() const
    }
    catch (FileIException error)
    {
-      error.printError();
+      error.printErrorStack();
       float err = -1.;
       return err;
    }
    catch (GroupIException error)
    {
-      error.printError();
+      error.printErrorStack();
       float err = -1.;
       return err;
    }
@@ -632,13 +632,13 @@ double LoadH5::getDatadouble() const
    }
    catch (FileIException error)
    {
-      error.printError();
+      error.printErrorStack();
       double err = -1.;
       return err;
    }
    catch (GroupIException error)
    {
-      error.printError();
+      error.printErrorStack();
       double err = -1.;
       return err;
    }
@@ -697,13 +697,13 @@ std::vector<int> LoadH5::getDataVint() const
    }
    catch (FileIException error)
    {
-      error.printError();
+      error.printErrorStack();
       std::vector<int> err{1,-1};
       return err;
    }
    catch (GroupIException error)
    {
-      error.printError();
+      error.printErrorStack();
       std::vector<int> err{1,-1};
       return err;
    }
@@ -759,13 +759,13 @@ std::vector<float> LoadH5::getDataVfloat() const
    }
    catch (FileIException error)
    {
-      error.printError();
+      error.printErrorStack();
       std::vector<float> err{1,-1.};
       return err;
    }
    catch (GroupIException error)
    {
-      error.printError();
+      error.printErrorStack();
       std::vector<float> err{1,-1.};
       return err;
    }
@@ -820,13 +820,13 @@ std::vector<double> LoadH5::getDataVDouble() const
    }
    catch (FileIException error)
    {
-      error.printError();
+      error.printErrorStack();
       std::vector<double> err{1,-1.};
       return err;
    }
    catch (GroupIException error)
    {
-      error.printError();
+      error.printErrorStack();
       std::vector<double> err{1,-1.};
       return err;
    }
@@ -894,13 +894,13 @@ std::vector<std::vector<int> > LoadH5::getData2Dint() const
    }
    catch (FileIException error)
    {
-      error.printError();
+      error.printErrorStack();
       std::vector<std::vector<int> > err{1,std::vector<int>(1,-1)};
       return err;
    }
    catch (GroupIException error)
    {
-      error.printError();
+      error.printErrorStack();
       std::vector<std::vector<int> > err{1,std::vector<int>(1,-1)};
       return err;
    }
@@ -955,13 +955,13 @@ std::vector<std::vector<float> > LoadH5::getData2Dfloat() const
    }
    catch (FileIException error)
    {
-      error.printError();
+      error.printErrorStack();
       std::vector<std::vector<float> > err{1,std::vector<float>(1,-1.)};
       return err;
    }
    catch (GroupIException error)
    {
-      error.printError();
+      error.printErrorStack();
       std::vector<std::vector<float> > err{1,std::vector<float>(1,-1.)};
       return err;
    }
@@ -1017,13 +1017,13 @@ std::vector<std::vector<double> > LoadH5::getData2Ddouble() const
    }
    catch (FileIException error)
    {
-      error.printError();
+      error.printErrorStack();
       std::vector<std::vector<double> > err{1,std::vector<double>(1,-1.)};
       return err;
    }
    catch (GroupIException error)
    {
-      error.printError();
+      error.printErrorStack();
       std::vector<std::vector<double> > err{1,std::vector<double>(1,-1.)};
       return err;
    }
